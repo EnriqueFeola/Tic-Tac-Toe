@@ -63,6 +63,7 @@ function App() {
     setTurn(newTurn);
     const newWinner = checkWinner(newBoard);
     if (newWinner) {
+      confetti();
       setWinner(newWinner);
     } else if (checkEndgame(newBoard)) {
       setWinner(false);
